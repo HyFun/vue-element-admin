@@ -1,11 +1,11 @@
 <template>
-  <section class="app-main">
+  <el-scrollbar class="app-main">
     <transition name="fade-transform" mode="out-in">
       <keep-alive :include="cachedViews">
         <router-view :key="key" />
       </keep-alive>
     </transition>
-  </section>
+  </el-scrollbar>
 </template>
 
 <script>
@@ -25,23 +25,27 @@ export default {
 <style lang="scss" scoped>
 .app-main {
   /* 50= navbar  50  */
-  min-height: calc(100vh - 50px);
+  // min-height: calc(100vh - 50px);
+  flex: 1;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  // 深度重写
+  ::v-deep .el-scrollbar__wrap {
+    overflow-x: hidden !important;
+  }
 }
 
-.fixed-header+.app-main {
+.fixed-header + .app-main {
   padding-top: 50px;
 }
 
 .hasTagsView {
   .app-main {
     /* 84 = navbar + tags-view = 50 + 34 */
-    min-height: calc(100vh - 84px);
+    // min-height: calc(100vh - 84px);
   }
 
-  .fixed-header+.app-main {
+  .fixed-header + .app-main {
     padding-top: 84px;
   }
 }

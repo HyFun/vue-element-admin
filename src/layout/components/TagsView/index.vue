@@ -16,7 +16,7 @@
         <span v-if="!isAffix(tag)" class="el-icon-close" @click.prevent.stop="closeSelectedTag(tag)" />
       </router-link>
     </scroll-pane>
-    <ul v-show="visible" :style="{left:left+'px',top:top+'px'}" class="contextmenu">
+    <ul v-show="visible" :style="{left:left+'px',top:'35px'}" class="contextmenu">
       <li @click="refreshSelectedTag(selectedTag)">Refresh</li>
       <li v-if="!isAffix(selectedTag)" @click="closeSelectedTag(selectedTag)">Close</li>
       <li @click="closeOthersTags">Close Others</li>
@@ -171,11 +171,13 @@ export default {
       }
     },
     openMenu(tag, e) {
+      console.log(e)
       const menuMinWidth = 105
       const offsetLeft = this.$el.getBoundingClientRect().left // container margin left
       const offsetWidth = this.$el.offsetWidth // container width
       const maxLeft = offsetWidth - menuMinWidth // left boundary
-      const left = e.clientX - offsetLeft + 15 // 15: margin right
+      // const left = e.clientX - offsetLeft + 15 // 15: margin right
+      const left = e.clientX - offsetLeft // 15: margin right
 
       if (left > maxLeft) {
         this.left = maxLeft
@@ -199,6 +201,7 @@ export default {
 
 <style lang="scss" scoped>
 .tags-view-container {
+  position: relative;
   height: 34px;
   width: 100%;
   background: #fff;
