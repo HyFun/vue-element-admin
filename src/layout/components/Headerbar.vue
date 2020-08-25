@@ -20,7 +20,7 @@
     <el-dropdown trigger="click">
       <div class="header-user el-dropdown-link">
         <img
-          src="https://user-gold-cdn.xitu.io/2020/7/28/17395a8a2bf6c9e7?imageView2/1/w/180/h/180/q/85/format/webp/interlace/1"
+          src="../../assets/images/avatar.jpg"
           alt="用户头像"
         >
         <span>administrator</span>
