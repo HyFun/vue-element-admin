@@ -197,6 +197,24 @@ export const asyncRoutes = [
   },
 
   {
+    path: '/test',
+    component: Layout,
+    redirect: '/test/vuedrag',
+    meta: {
+      title: '测试页面',
+      icon: 'el-icon-s-help'
+    },
+    children: [
+      {
+        path: 'vuedrag',
+        component: () => import('@/views/test/vuedrag/index'),
+        name: 'Tab',
+        meta: { title: '拖拽组件' }
+      }
+    ]
+  },
+
+  {
     path: '/error',
     component: Layout,
     redirect: 'noRedirect',
