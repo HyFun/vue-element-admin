@@ -33,6 +33,7 @@ export default {
     onDragChange(event) {
       console.log('拖拽了>>>>', event)
     }
+
   }
 }
 </script>
