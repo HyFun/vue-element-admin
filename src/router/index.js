@@ -208,8 +208,14 @@ export const asyncRoutes = [
       {
         path: 'vuedrag',
         component: () => import('@/views/test/vuedrag/index'),
-        name: 'Tab',
+        name: 'VueDrag',
         meta: { title: '拖拽组件' }
+      },
+      {
+        path: 'steps',
+        component: () => import('@/views/test/step/index'),
+        name: 'Steps',
+        meta: { title: '自定义步骤条' }
       }
     ]
   },
