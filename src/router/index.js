@@ -216,6 +216,12 @@ export const asyncRoutes = [
         component: () => import('@/views/test/step/index'),
         name: 'Steps',
         meta: { title: '自定义步骤条' }
+      },
+      {
+        path: 'async-cascader',
+        component: () => import('@/views/test/async-cascader/index'),
+        name: 'AsyncCascader',
+        meta: { title: '异步级联数据' }
       }
     ]
   },
