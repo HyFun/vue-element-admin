@@ -36,6 +36,13 @@ module.exports = {
       warnings: false,
       errors: true
     },
+    proxy: {
+      '/mgt-api': {
+        target: 'http://10.128.122.252:4936',
+        changeOrigin: true,
+        logLevel: 'debug'
+      }
+    },
     before: require('./mock/mock-server.js')
   },
   configureWebpack: {

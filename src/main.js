@@ -45,6 +45,10 @@ Object.keys(filters).forEach(key => {
 
 Vue.config.productionTip = false
 
+// uploader
+import uploader from 'vue-simple-uploader'
+Vue.use(uploader)
+
 new Vue({
   el: '#app',
   router,

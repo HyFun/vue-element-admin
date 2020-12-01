@@ -222,6 +222,12 @@ export const asyncRoutes = [
         component: () => import('@/views/test/async-cascader/index'),
         name: 'AsyncCascader',
         meta: { title: '异步级联数据' }
+      },
+      {
+        path: 'select-event',
+        component: () => import('@/views/test/select-event/index'),
+        name: 'AsyncCascader',
+        meta: { title: 'select选中事件' }
       }
     ]
   },
