@@ -132,6 +132,7 @@ export default {
       Bus.$emit('fileAdded')
     },
     onFileProgress(rootFile, file, chunk) {
+      console.log('上传中::::', file, chunk)
       console.log(
         `上传中 ${file.name}，chunk：${chunk.startByte / 1024 / 1024} ~ ${
           chunk.endByte / 1024 / 1024

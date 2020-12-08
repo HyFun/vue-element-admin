@@ -228,6 +228,12 @@ export const asyncRoutes = [
         component: () => import('@/views/test/select-event/index'),
         name: 'AsyncCascader',
         meta: { title: 'select选中事件' }
+      },
+      {
+        path: 'uploader',
+        component: () => import('@/views/test/uploader/index'),
+        name: 'CustomUploader',
+        meta: { title: '分片上传' }
       }
     ]
   },
